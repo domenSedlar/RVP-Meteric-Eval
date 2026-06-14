@@ -9,7 +9,7 @@ pths = [".\Matrices\small_random.tsv", ".\Matrices\large_random.tsv", ".\Matrice
 res_files = [os.path.join("./Results/", pth.split('\\')[-1].split("/")[-1].split('.')[0] + '.csv') for pth in pths]
 
 
-metric_cols = ["ME4", "MI4", "MS4"]
+metric_cols = ["ME4", "MI4", "MS4", "WV2", "WV3"]
 
 
 for pth, res_pth in zip(pths, res_files):

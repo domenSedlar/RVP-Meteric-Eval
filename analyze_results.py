@@ -41,7 +41,7 @@ def jaccard_index(set1, set2):
     return intersection / union if union > 0 else 0
 
 def analyze(df, name):
-    metric_cols = ["ME8", "ME4", "MI4", "MS4", "MS8", "MI8"]
+    metric_cols = ["ME8", "ME4", "MI4", "MS4", "MS8", "MI8", "WV2", "WV3"]
     df['MS4'] = -df['MS4']
     df['MS8'] = -df['MS8']
     topk = {}

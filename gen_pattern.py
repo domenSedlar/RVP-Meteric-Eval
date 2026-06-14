@@ -1,6 +1,7 @@
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+import os
 
 def _gauss_helper(x, A, mu):
     r = (x - mu).T @ A @ (x - mu)
@@ -75,5 +76,6 @@ def large():
 if __name__ == "__main__":
     L = large()
     S = small()
-    np.savetxt('./Matrices/small_gauss.tsv', S, delimiter='\t')
-    np.savetxt('./Matrices/large_gauss.tsv', L, delimiter='\t')
+    os.makedirs('./Matrices/Sorted/', exist_ok=True)
+    np.savetxt('./Matrices/Sorted/small_gauss.tsv', S, delimiter='\t')
+    np.savetxt('./Matrices/Sorted/large_gauss.tsv', L, delimiter='\t')
